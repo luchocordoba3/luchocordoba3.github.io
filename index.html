@@ -3,20 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Selecto Â· Lo mejor de Mercado Libre, elegido a mano</title>
-<meta name="description" content="SelecciÃ³n curada de los mejores productos de Mercado Libre Argentina: los mÃ¡s vendidos, los de mejor precio y los de mayor descuento. Investigados y elegidos a mano, no spam.">
+<title>Selecto · Lo mejor de Mercado Libre, elegido a mano</title>
+<meta name="description" content="Selección curada de los mejores productos de Mercado Libre Argentina: los más vendidos, los de mejor precio y los de mayor descuento. Investigados y elegidos a mano, no spam.">
 <meta name="author" content="Selecto">
 <meta name="theme-color" content="#EEEAE1">
 <meta name="robots" content="index, follow">
 <!-- Open Graph / redes sociales -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_AR">
-<meta property="og:title" content="Selecto Â· Lo mejor de Mercado Libre, elegido a mano">
-<meta property="og:description" content="Los mÃ¡s vendidos, los de mejor precio y los de mayor descuento de Mercado Libre Argentina â€” investigados y seleccionados.">
+<meta property="og:title" content="Selecto · Lo mejor de Mercado Libre, elegido a mano">
+<meta property="og:description" content="Los más vendidos, los de mejor precio y los de mayor descuento de Mercado Libre Argentina — investigados y seleccionados.">
 <meta property="og:site_name" content="Selecto">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Selecto Â· Lo mejor de Mercado Libre, elegido a mano">
-<meta name="twitter:description" content="SelecciÃ³n curada de Mercado Libre Argentina â€” investigada y elegida a mano.">
+<meta name="twitter:title" content="Selecto · Lo mejor de Mercado Libre, elegido a mano">
+<meta name="twitter:description" content="Selección curada de Mercado Libre Argentina — investigada y elegida a mano.">
 <!-- Favicon: cuadrado oscuro con 'S' serif + punto de acento (igual que el wordmark) -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231B1915'/%3E%3Ctext x='15' y='23' font-family='Georgia,serif' font-size='21' fill='%23EEEAE1' text-anchor='middle'%3ES%3C/text%3E%3Ccircle cx='25' cy='9' r='3' fill='%23E5B80B'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -122,7 +122,7 @@
   .footer-link:hover { text-decoration: underline; }
   .footer-copy { margin-top: 30px; padding-top: 18px; border-top: 1px solid rgba(27,25,21,0.10); font: 500 12px 'Hanken Grotesk'; color: #938C80; }
 
-  /* â”€â”€ MODAL BASE â”€â”€ */
+  /* ── MODAL BASE ── */
   .overlay { position: fixed; inset: 0; background: rgba(27,25,21,0.5); backdrop-filter: blur(4px); z-index: 200; display: flex; align-items: center; justify-content: center; padding: 22px; }
   .modal { background: #FBFAF6; border-radius: 18px; width: 100%; max-width: 420px; box-shadow: 0 24px 60px rgba(27,25,21,0.18); overflow: hidden; }
   .modal-head { padding: 26px 26px 0; }
@@ -154,7 +154,7 @@
   .modal-footer { display: flex; gap: 10px; justify-content: flex-end; padding-top: 8px; }
   .error-msg { font: 500 12px 'Hanken Grotesk'; color: #C24A2B; margin-top: -8px; margin-bottom: 8px; }
 
-  /* â”€â”€ ADMIN PANEL â”€â”€ */
+  /* ── ADMIN PANEL ── */
   .admin-panel { position: fixed; inset: 0; z-index: 300; display: flex; flex-direction: column; background: #1B1915; color: #EEEAE1; }
   .admin-topbar { display: flex; align-items: center; gap: 14px; padding: 16px 24px; border-bottom: 1px solid rgba(255,255,255,0.08); flex-shrink: 0; }
   .admin-topbar-title { font: 500 18px 'Newsreader', serif; color: #EEEAE1; flex: 1; }
@@ -200,79 +200,79 @@
 <div id="app"></div>
 
 <script>
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-//  CONFIGURACIÃ“N
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-const ADMIN_PASSWORD = 'selecto2026'; // â† cambiÃ¡ la contraseÃ±a acÃ¡
+// ════════════════════════════════════════════════════════════════
+//  CONFIGURACIÓN
+// ════════════════════════════════════════════════════════════════
+const ADMIN_PASSWORD = 'selecto2026'; // ← cambiá la contraseña acá
 const LOGO_CLICKS_NEEDED = 5;
 const STORAGE_KEY = 'selecto_products_v3';
-const ML_IMG = 'https://http2.mlstatic.com/'; // base de imÃ¡genes de Mercado Libre
+const ML_IMG = 'https://http2.mlstatic.com/'; // base de imágenes de Mercado Libre
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-//  CATEGORÃAS (label + color). La comisiÃ³n es por producto.
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ════════════════════════════════════════════════════════════════
+//  CATEGORÍAS (label + color). La comisión es por producto.
+// ════════════════════════════════════════════════════════════════
 const CATS = [
   { key: 'moda',    label: 'Moda y Accesorios',   tint: '#E7E0D2' },
   { key: 'belleza', label: 'Belleza y Cuidado',   tint: '#ECE0E2' },
   { key: 'deporte', label: 'Deporte y Fitness',   tint: '#DBE5DD' },
   { key: 'hogar',   label: 'Hogar y Electro',     tint: '#E4E2DA' },
-  { key: 'audio',   label: 'ElectrÃ³nica y Audio', tint: '#DEE2E6' },
+  { key: 'audio',   label: 'Electrónica y Audio', tint: '#DEE2E6' },
   { key: 'tech',    label: 'Celulares y Tech',    tint: '#E0DEE6' },
 ];
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-//  PRODUCTOS â€” catÃ¡logo real del programa de afiliados de ML.
-//  Cada uno con su comisiÃ³n real (comm) y link de afiliado (meli.la).
-//  EditÃ¡ todo desde el panel admin (5 clics en el logo).
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ════════════════════════════════════════════════════════════════
+//  PRODUCTOS — catálogo real del programa de afiliados de ML.
+//  Cada uno con su comisión real (comm) y link de afiliado (meli.la).
+//  Editá todo desde el panel admin (5 clics en el logo).
+// ════════════════════════════════════════════════════════════════
 const DEFAULT_PRODUCTS = [
-  // â”€â”€ MODA Y ACCESORIOS â”€â”€
+  // ── MODA Y ACCESORIOS ──
   { id:'m1', name:'Valija Carry On Cabina 20" 4 Ruedas', cat:'moda', price:119999, old:0, comm:15, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/1uLMZ9b', image:ML_IMG+'D_Q_NP_2X_749399-MLA99453766496_112025-AB.webp' },
   { id:'m2', name:'Mochila Antirrobo Porta Notebook',    cat:'moda', price:31999,  old:0, comm:15, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/1v2u7Da', image:ML_IMG+'D_Q_NP_2X_614419-MLA85706408643_062025-AB.webp' },
   { id:'m3', name:'Boxer Calvin Klein (Caja)',           cat:'moda', price:10590,  old:0, comm:15, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/2QjAgW6', image:ML_IMG+'D_Q_NP_2X_963332-MLA82234338810_022025-AB.webp' },
   { id:'m4', name:'Zapatillas Topper Tie Break III',     cat:'moda', price:84900,  old:0, comm:15, best:false, premium:false, sold:'', affiliateUrl:'https://meli.la/1eCgtnG', image:ML_IMG+'D_Q_NP_2X_911668-MLA110740754055_042026-AB.webp' },
   { id:'m5', name:'Buzo Hoodie Canguro con Capucha',     cat:'moda', price:39999,  old:0, comm:15, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/21Bc9pG', image:ML_IMG+'D_Q_NP_2X_621727-MLA110535940285_042026-AB.webp' },
-  { id:'m6', name:'Jogging Friza Hombre con PuÃ±o',       cat:'moda', price:23000,  old:0, comm:15, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/2XoReFj', image:ML_IMG+'D_Q_NP_2X_905640-MLA112632321600_062026-AB.webp' },
-  { id:'m7', name:'Campera Parka Baker TÃ©rmica',         cat:'moda', price:299990, old:0, comm:15, best:true,  premium:true,  sold:'', affiliateUrl:'https://meli.la/2xthujD', image:ML_IMG+'D_Q_NP_2X_904534-MLA112320018053_052026-AB.webp' },
+  { id:'m6', name:'Jogging Friza Hombre con Puño',       cat:'moda', price:23000,  old:0, comm:15, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/2XoReFj', image:ML_IMG+'D_Q_NP_2X_905640-MLA112632321600_062026-AB.webp' },
+  { id:'m7', name:'Campera Parka Baker Térmica',         cat:'moda', price:299990, old:0, comm:15, best:true,  premium:true,  sold:'', affiliateUrl:'https://meli.la/2xthujD', image:ML_IMG+'D_Q_NP_2X_904534-MLA112320018053_052026-AB.webp' },
 
-  // â”€â”€ BELLEZA Y CUIDADO â”€â”€
-  { id:'b1', name:'Combo Valca RegeneraciÃ³n Intensiva',  cat:'belleza', price:63790, old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/167ygyF', image:ML_IMG+'D_Q_NP_2X_791777-MLA106187447246_022026-AB.webp' },
+  // ── BELLEZA Y CUIDADO ──
+  { id:'b1', name:'Combo Valca Regeneración Intensiva',  cat:'belleza', price:63790, old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/167ygyF', image:ML_IMG+'D_Q_NP_2X_791777-MLA106187447246_022026-AB.webp' },
   { id:'b2', name:'Acondicionador Elvive Glycolic 400ml',cat:'belleza', price:12489, old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/1xWpkrL', image:ML_IMG+'D_Q_NP_2X_891761-MLA99338428386_112025-AB.webp' },
   { id:'b3', name:'Zaleas Protector de Cama x10',        cat:'belleza', price:5799,  old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/2qakctg', image:ML_IMG+'D_Q_NP_2X_716443-MLA109694874583_032026-AB.webp' },
   { id:'b4', name:'Equipo de Alta Frecuencia Gadnic LF60',cat:'belleza',price:79949, old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/1GFvSfq', image:ML_IMG+'D_Q_NP_2X_678865-MLA91655044961_092025-AB.webp' },
-  { id:'b5', name:'JabÃ³n Dove Tocador Pack x3',          cat:'belleza', price:6405,  old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/1e5o159', image:ML_IMG+'D_Q_NP_2X_859674-MLA99928911273_112025-AB.webp' },
+  { id:'b5', name:'Jabón Dove Tocador Pack x3',          cat:'belleza', price:6405,  old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/1e5o159', image:ML_IMG+'D_Q_NP_2X_859674-MLA99928911273_112025-AB.webp' },
   { id:'b6', name:'Cepillo Secador y Moldeador',         cat:'belleza', price:67049, old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/322aSMt', image:ML_IMG+'D_Q_NP_2X_913911-MLA100115203113_122025-AB.webp' },
-  { id:'b7', name:'Afeitadora ElÃ©ctrica VGR V-325',      cat:'belleza', price:79580, old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/1aVguwN', image:ML_IMG+'D_Q_NP_2X_781043-MLA99501107520_112025-AB.webp' },
+  { id:'b7', name:'Afeitadora Eléctrica VGR V-325',      cat:'belleza', price:79580, old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/1aVguwN', image:ML_IMG+'D_Q_NP_2X_781043-MLA99501107520_112025-AB.webp' },
 
-  // â”€â”€ DEPORTE Y FITNESS â”€â”€
+  // ── DEPORTE Y FITNESS ──
   { id:'d1', name:'Pistola Fox CO2 P92 + Balines',       cat:'deporte', price:162375, old:0, comm:15, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/2Y6U8ku', image:ML_IMG+'D_Q_NP_2X_651896-MLA108326941711_032026-AB.webp' },
   { id:'d2', name:'Termo Acero Inoxidable Philco 1L',    cat:'deporte', price:64129,  old:0, comm:15, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/2TZ79as', image:ML_IMG+'D_Q_NP_2X_631041-MLA110079025647_042026-AB.webp' },
-  { id:'d3', name:'Linterna TÃ¡ctica Recargable USB',     cat:'deporte', price:25338,  old:0, comm:15, best:false, premium:false, sold:'', affiliateUrl:'https://meli.la/2qjjbY7', image:ML_IMG+'D_Q_NP_2X_611320-CBT105626236575_012026-AB.webp' },
+  { id:'d3', name:'Linterna Táctica Recargable USB',     cat:'deporte', price:25338,  old:0, comm:15, best:false, premium:false, sold:'', affiliateUrl:'https://meli.la/2qjjbY7', image:ML_IMG+'D_Q_NP_2X_611320-CBT105626236575_012026-AB.webp' },
   { id:'d4', name:'Banco de Pesas Plano Regulable',      cat:'deporte', price:260000, old:0, comm:15, best:true,  premium:true,  sold:'', affiliateUrl:'https://meli.la/2H2MvEu', image:ML_IMG+'D_Q_NP_2X_884173-MLA99976836259_112025-AB.webp' },
-  { id:'d5', name:'Vaso TÃ©rmico 1200ml Antiderrame',     cat:'deporte', price:59999,  old:0, comm:15, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/2vQxbKY', image:ML_IMG+'D_Q_NP_2X_838577-MLA110815921239_042026-AB.webp' },
+  { id:'d5', name:'Vaso Térmico 1200ml Antiderrame',     cat:'deporte', price:59999,  old:0, comm:15, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/2vQxbKY', image:ML_IMG+'D_Q_NP_2X_838577-MLA110815921239_042026-AB.webp' },
   { id:'d6', name:'Mini Escalador Stepper con Monitor',  cat:'deporte', price:109988, old:0, comm:15, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/1GqAHvx', image:ML_IMG+'D_Q_NP_2X_623235-MLA100475637884_122025-AB.webp' },
-  { id:'d7', name:'Camiseta adidas SelecciÃ³n Argentina', cat:'deporte', price:59999,  old:0, comm:15, best:false, premium:false, sold:'', affiliateUrl:'https://meli.la/1MHjEfY', image:ML_IMG+'D_Q_NP_2X_622100-MLA108322167768_032026-AB.webp' },
+  { id:'d7', name:'Camiseta adidas Selección Argentina', cat:'deporte', price:59999,  old:0, comm:15, best:false, premium:false, sold:'', affiliateUrl:'https://meli.la/1MHjEfY', image:ML_IMG+'D_Q_NP_2X_622100-MLA108322167768_032026-AB.webp' },
 
-  // â”€â”€ HOGAR Y ELECTRO â”€â”€
+  // ── HOGAR Y ELECTRO ──
   { id:'h1', name:'Planchita + Secador de Pelo Suono',   cat:'hogar', price:60299,  old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/29vrFn6', image:ML_IMG+'D_Q_NP_2X_621187-MLA110224385769_042026-AB.webp' },
   { id:'h2', name:'Mixer Ultracomb Vaso 800ml',          cat:'hogar', price:99999,  old:0, comm:7,  best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/16nEVeU', image:ML_IMG+'D_Q_NP_2X_833200-MLA112800840045_062026-AB.webp' },
   { id:'h3', name:'Aspiradora Robot Trapeadora Fika',    cat:'hogar', price:249371, old:0, comm:7,  best:true, premium:true,  sold:'', affiliateUrl:'https://meli.la/1UiJmYA', image:ML_IMG+'D_Q_NP_2X_841864-MLA110301587450_052026-AB.webp' },
   { id:'h4', name:'Balanza Digital con Bluetooth',       cat:'hogar', price:27999,  old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/2xMehu2', image:ML_IMG+'D_Q_NP_2X_924343-MLA111544207435_052026-AB.webp' },
-  { id:'h5', name:'MÃ¡quina de Coser Naku MC-002',        cat:'hogar', price:94999,  old:0, comm:7,  best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/2WKDP4x', image:ML_IMG+'D_Q_NP_2X_767063-MLA83333016114_042025-AB.webp' },
-  { id:'h6', name:'Nebulizador Mesh PortÃ¡til',           cat:'hogar', price:16299,  old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/247Sfxt', image:ML_IMG+'D_Q_NP_2X_680372-MLA113685888697_062026-AB.webp' },
+  { id:'h5', name:'Máquina de Coser Naku MC-002',        cat:'hogar', price:94999,  old:0, comm:7,  best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/2WKDP4x', image:ML_IMG+'D_Q_NP_2X_767063-MLA83333016114_042025-AB.webp' },
+  { id:'h6', name:'Nebulizador Mesh Portátil',           cat:'hogar', price:16299,  old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/247Sfxt', image:ML_IMG+'D_Q_NP_2X_680372-MLA113685888697_062026-AB.webp' },
   { id:'h7', name:'Secador de Pelo Daewoo 2100W',        cat:'hogar', price:79950,  old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/2aLUX6C', image:ML_IMG+'D_Q_NP_2X_872804-MLA99453742720_112025-AB.webp' },
 
-  // â”€â”€ ELECTRÃ“NICA Y AUDIO â”€â”€
-  { id:'a1', name:'MicrÃ³fono InalÃ¡mbrico Corbatero',     cat:'audio', price:29999,   old:0, comm:7, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/1H425Vj', image:ML_IMG+'D_Q_NP_2X_903296-MLA95640245888_102025-AB.webp' },
-  { id:'a2', name:'Proyector LÃ¡ser Multipunto',          cat:'audio', price:30433,   old:0, comm:7, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/2JRnbRm', image:ML_IMG+'D_Q_NP_2X_939688-MLA91955283971_092025-AB.webp' },
+  // ── ELECTRÓNICA Y AUDIO ──
+  { id:'a1', name:'Micrófono Inalámbrico Corbatero',     cat:'audio', price:29999,   old:0, comm:7, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/1H425Vj', image:ML_IMG+'D_Q_NP_2X_903296-MLA95640245888_102025-AB.webp' },
+  { id:'a2', name:'Proyector Láser Multipunto',          cat:'audio', price:30433,   old:0, comm:7, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/2JRnbRm', image:ML_IMG+'D_Q_NP_2X_939688-MLA91955283971_092025-AB.webp' },
   { id:'a3', name:'Mini Drone Plegable 4K',              cat:'audio', price:54999,   old:0, comm:7, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/2hQ7FYt', image:ML_IMG+'D_Q_NP_2X_609415-MLA99558490224_122025-AB.webp' },
   { id:'a4', name:'TV Stick Wi-Fi Android',              cat:'audio', price:32989,   old:0, comm:7, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/1iAiway', image:ML_IMG+'D_Q_NP_2X_810140-MLA99989898035_112025-AB.webp' },
   { id:'a5', name:'Cable Coaxial RG6 15m',               cat:'audio', price:7990,    old:0, comm:7, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/2BwTJ97', image:ML_IMG+'D_Q_NP_2X_931726-MLA96412238153_102025-AB.webp' },
   { id:'a6', name:'Microcomponente de Audio',            cat:'audio', price:293332,  old:0, comm:7, best:false, premium:true,  sold:'', affiliateUrl:'https://meli.la/18pfUUk', image:ML_IMG+'D_Q_NP_2X_905328-MLA108805785735_032026-AB.webp' },
   { id:'a7', name:'Smart TV TCL 55" 4K Google TV',       cat:'audio', price:1099999, old:0, comm:7, best:true,  premium:true,  sold:'', affiliateUrl:'https://meli.la/1VTgW44', image:ML_IMG+'D_Q_NP_2X_900058-MLA108865608835_032026-AB.webp' },
 
-  // â”€â”€ CELULARES Y TECH â”€â”€
-  { id:'t1', name:'TelÃ©fono de LÃ­nea Fijo',              cat:'tech', price:29950,  old:0, comm:7, best:false, premium:false, sold:'', affiliateUrl:'https://meli.la/1dniGQJ', image:ML_IMG+'D_Q_NP_2X_916729-MLA112312899802_062026-AB.webp' },
+  // ── CELULARES Y TECH ──
+  { id:'t1', name:'Teléfono de Línea Fijo',              cat:'tech', price:29950,  old:0, comm:7, best:false, premium:false, sold:'', affiliateUrl:'https://meli.la/1dniGQJ', image:ML_IMG+'D_Q_NP_2X_916729-MLA112312899802_062026-AB.webp' },
   { id:'t2', name:'Xiaomi Smart Band 9 Active',          cat:'tech', price:54999,  old:0, comm:7, best:false, premium:false, sold:'', affiliateUrl:'https://meli.la/2gKyNzg', image:ML_IMG+'D_Q_NP_2X_606345-MLA103742072561_012026-AB.webp' },
   { id:'t3', name:'Soporte Apoya Celular/Tablet',        cat:'tech', price:9249,   old:0, comm:7, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/1Wa8vL5', image:ML_IMG+'D_Q_NP_2X_697342-MLA96002656438_102025-AB.webp' },
   { id:'t4', name:'MicroSD 64GB Kingston Canvas',        cat:'tech', price:29898,  old:0, comm:7, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/1oF9PDJ', image:ML_IMG+'D_Q_NP_2X_784493-MLA99443950268_112025-AB.webp' },
@@ -281,9 +281,9 @@ const DEFAULT_PRODUCTS = [
   { id:'t7', name:'Aro de Luz LED 30cm',                 cat:'tech', price:24999,  old:0, comm:7, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/1LxGb6W', image:ML_IMG+'D_Q_NP_2X_647519-MLA99849365773_112025-AB.webp' },
 ];
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ════════════════════════════════════════════════════════════════
 //  PERSISTENCE
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ════════════════════════════════════════════════════════════════
 function loadProducts() {
   try { const s = localStorage.getItem(STORAGE_KEY); if (s) return JSON.parse(s); } catch {}
   return DEFAULT_PRODUCTS.map(p => ({ ...p }));
@@ -291,12 +291,12 @@ function loadProducts() {
 function saveProducts(prods) { localStorage.setItem(STORAGE_KEY, JSON.stringify(prods)); }
 function resetProducts() { saveProducts(DEFAULT_PRODUCTS.map(p => ({ ...p }))); return loadProducts(); }
 
-// â”€â”€ CATÃLOGO REMOTO (opcional, para el futuro) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-// Hoy los productos viven en DEFAULT_PRODUCTS (acÃ¡ arriba) y se editan
-// desde el panel admin (se guardan en localStorage, sÃ³lo en tu dispositivo).
-// Si mÃ¡s adelante querÃ©s servir el catÃ¡logo desde un JSON publicado
+// ── CATÁLOGO REMOTO (opcional, para el futuro) ──────────────────
+// Hoy los productos viven en DEFAULT_PRODUCTS (acá arriba) y se editan
+// desde el panel admin (se guardan en localStorage, sólo en tu dispositivo).
+// Si más adelante querés servir el catálogo desde un JSON publicado
 // (CMS, GitHub, Google Sheets exportado a JSON, etc.) sin tocar este archivo,
-// descomentÃ¡ esto y ponÃ© la URL. Cae a DEFAULT_PRODUCTS si falla.
+// descomentá esto y poné la URL. Cae a DEFAULT_PRODUCTS si falla.
 //
 // const REMOTE_CATALOG_URL = 'https://tu-dominio.com/productos.json';
 // async function loadRemoteCatalog() {
@@ -305,13 +305,13 @@ function resetProducts() { saveProducts(DEFAULT_PRODUCTS.map(p => ({ ...p }))); 
 //     if (!res.ok) return;
 //     const data = await res.json();
 //     if (Array.isArray(data) && data.length) { products = data; render(); }
-//   } catch (e) { /* sin conexiÃ³n / JSON invÃ¡lido â†’ se usa el catÃ¡logo local */ }
+//   } catch (e) { /* sin conexión / JSON inválido → se usa el catálogo local */ }
 // }
 // loadRemoteCatalog();
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ════════════════════════════════════════════════════════════════
 //  HELPERS
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ════════════════════════════════════════════════════════════════
 const fmt = n => '$' + Math.round(n).toLocaleString('es-AR');
 const catOf = k => CATS.find(c => c.key === k);
 const uid = () => Math.random().toString(36).slice(2, 9);
@@ -343,9 +343,9 @@ const COMPARATORS = {
   ganancia:    (a,b) => (b.earn-a.earn),
 };
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ════════════════════════════════════════════════════════════════
 //  STATE
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ════════════════════════════════════════════════════════════════
 let products = loadProducts();
 let state = { view: 'home', sort: 'recomendado' };
 let adminState = { open: false, loggedIn: false, modal: null };
@@ -373,9 +373,9 @@ function onLogoClick() {
   logoClickTimer = setTimeout(() => { logoClickCount = 0; }, 800);
 }
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ════════════════════════════════════════════════════════════════
 //  DOM HELPERS
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ════════════════════════════════════════════════════════════════
 function el(tag, attrs, ...children) {
   const e = document.createElement(tag);
   for (const [k, v] of Object.entries(attrs || {})) {
@@ -392,9 +392,9 @@ function el(tag, attrs, ...children) {
 }
 const h = el;
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-//  CARD (vista pÃºblica â€” NO muestra comisiÃ³n ni ganancia)
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ════════════════════════════════════════════════════════════════
+//  CARD (vista pública — NO muestra comisión ni ganancia)
+// ════════════════════════════════════════════════════════════════
 function Card(it) {
   const imgEl = it.image
     ? h('img', { src: it.image, alt: it.name, loading: 'lazy' })
@@ -404,7 +404,7 @@ function Card(it) {
     h('div', { class: 'card-img', style: { background: it.tint } },
       imgEl,
       h('div', { class: 'badges' },
-        it.best && h('span', { class: 'badge badge-best' }, 'â˜… MÃS VENDIDO'),
+        it.best && h('span', { class: 'badge badge-best' }, '★ MÁS VENDIDO'),
         it.showPrem && h('span', { class: 'badge badge-prem' }, 'TICKET ALTO'),
         it.hasOff && h('span', { class: 'badge badge-off' }, it.offStr),
       ),
@@ -418,18 +418,18 @@ function Card(it) {
         h('span', { class: 'price' }, it.priceStr),
         it.hasOld && h('span', { class: 'price-old' }, it.oldStr),
       ),
-      h('span', { class: 'free-ship' }, 'âœ“ EnvÃ­o gratis'),
-      h('a', { class: 'cta', href: it.url, target: '_blank', rel: 'noopener noreferrer' }, 'Ver en Mercado Libre â†’'),
+      h('span', { class: 'free-ship' }, '✓ Envío gratis'),
+      h('a', { class: 'cta', href: it.url, target: '_blank', rel: 'noopener noreferrer' }, 'Ver en Mercado Libre →'),
     ),
   );
 }
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ════════════════════════════════════════════════════════════════
 //  LOGIN MODAL
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ════════════════════════════════════════════════════════════════
 function LoginModal() {
-  const inp = h('input', { type: 'password', placeholder: 'ContraseÃ±a', style: { marginBottom: '14px' } });
-  const err = h('p', { class: 'error-msg', style: { display: 'none' } }, 'ContraseÃ±a incorrecta.');
+  const inp = h('input', { type: 'password', placeholder: 'Contraseña', style: { marginBottom: '14px' } });
+  const err = h('p', { class: 'error-msg', style: { display: 'none' } }, 'Contraseña incorrecta.');
   function tryLogin() {
     if (inp.value === ADMIN_PASSWORD) { adminState = { open: true, loggedIn: true, modal: null }; render(); }
     else { err.style.display = 'block'; inp.value = ''; inp.focus(); }
@@ -439,10 +439,10 @@ function LoginModal() {
     h('div', { class: 'modal' },
       h('div', { class: 'modal-head' },
         h('p', { class: 'modal-title' }, 'Acceso admin'),
-        h('p', { class: 'modal-sub' }, 'IngresÃ¡ tu contraseÃ±a para continuar.'),
+        h('p', { class: 'modal-sub' }, 'Ingresá tu contraseña para continuar.'),
       ),
       h('div', { class: 'modal-body' },
-        h('div', { class: 'field' }, h('label', null, 'CONTRASEÃ‘A'), inp),
+        h('div', { class: 'field' }, h('label', null, 'CONTRASEÑA'), inp),
         err,
         h('button', { class: 'btn btn-primary', onClick: tryLogin }, 'Entrar'),
       ),
@@ -450,9 +450,9 @@ function LoginModal() {
   );
 }
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ════════════════════════════════════════════════════════════════
 //  PRODUCT FORM MODAL (add / edit)
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ════════════════════════════════════════════════════════════════
 function ProductFormModal(existing) {
   const isEdit = !!existing;
   const p = existing || { id: uid(), name: '', cat: 'moda', price: '', old: '', comm: 15, best: false, premium: false, sold: '', affiliateUrl: '', image: '' };
@@ -490,7 +490,7 @@ function ProductFormModal(existing) {
     saveProducts(products); adminState.modal = null; render();
   }
   function remove() {
-    if (!confirm(`Â¿Eliminar "${p.name}"?`)) return;
+    if (!confirm(`¿Eliminar "${p.name}"?`)) return;
     products = products.filter(x => x.id !== p.id);
     saveProducts(products); adminState.modal = null; render();
   }
@@ -499,17 +499,17 @@ function ProductFormModal(existing) {
     h('div', { class: 'modal', style: { maxWidth: '520px', maxHeight: '90vh', overflowY: 'auto' } },
       h('div', { class: 'modal-head' },
         h('p', { class: 'modal-title' }, isEdit ? 'Editar producto' : 'Agregar producto'),
-        h('p', { class: 'modal-sub' }, 'Los cambios se guardan automÃ¡ticamente en este dispositivo.'),
+        h('p', { class: 'modal-sub' }, 'Los cambios se guardan automáticamente en este dispositivo.'),
       ),
       h('div', { class: 'modal-body' },
         h('div', { class: 'field' }, h('label', null, 'NOMBRE'), fName),
-        h('div', { class: 'field' }, h('label', null, 'CATEGORÃA'), fCat),
+        h('div', { class: 'field' }, h('label', null, 'CATEGORÍA'), fCat),
         h('div', { class: 'field-row-3' },
           h('div', { class: 'field' }, h('label', null, 'PRECIO ($)'), fPrice),
           h('div', { class: 'field' }, h('label', null, 'P. ANTERIOR'), fOld),
-          h('div', { class: 'field' }, h('label', null, 'COMISIÃ“N %'), fComm),
+          h('div', { class: 'field' }, h('label', null, 'COMISIÓN %'), fComm),
         ),
-        h('div', { class: 'field-check' }, fBest, h('label', null, 'â˜… MÃ¡s vendido')),
+        h('div', { class: 'field-check' }, fBest, h('label', null, '★ Más vendido')),
         h('div', { class: 'field-check' }, fPrem, h('label', null, 'Ticket alto (Premium)')),
         h('div', { class: 'field' }, h('label', null, 'TEXTO DE VENTAS'), fSold),
         h('div', { class: 'field' }, h('label', null, 'LINK DE AFILIADO (meli.la)'), fUrl),
@@ -526,9 +526,9 @@ function ProductFormModal(existing) {
   );
 }
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ════════════════════════════════════════════════════════════════
 //  ADMIN PANEL
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ════════════════════════════════════════════════════════════════
 function AdminPanel() {
   const all = products.map(buildVM);
   const totalEarn = all.reduce((s, x) => s + x.earn, 0);
@@ -549,10 +549,10 @@ function AdminPanel() {
                 it.best && h('span', { class: 'tag tag-best' }, 'VENDIDO'),
                 it.premium && h('span', { class: 'tag tag-prem' }, 'PREMIUM'),
               ),
-              h('div', { class: 'product-row-meta' }, `${it.priceStr}  Â·  comisiÃ³n ${it.totalStr}  Â·  ganÃ¡s ~${it.earnStr}`),
+              h('div', { class: 'product-row-meta' }, `${it.priceStr}  ·  comisión ${it.totalStr}  ·  ganás ~${it.earnStr}`),
             ),
             h('div', { class: 'product-row-actions' },
-              h('a', { class: 'btn btn-ghost btn-sm', href: it.url, target: '_blank', rel: 'noopener' }, 'â†—'),
+              h('a', { class: 'btn btn-ghost btn-sm', href: it.url, target: '_blank', rel: 'noopener' }, '↗'),
               h('button', { class: 'btn btn-accent btn-sm', onClick: () => { adminState.modal = 'edit'; editingProduct = products.find(x => x.id === it.id); render(); } }, 'Editar'),
             ),
           )
@@ -563,7 +563,7 @@ function AdminPanel() {
 
   const commTable = h('table', { class: 'comm-table' },
     h('thead', null, h('tr', null,
-      h('th', null, 'CATEGORÃA'), h('th', null, 'PRODUCTOS'), h('th', null, 'COMISIÃ“N PROM.'), h('th', null, 'GANANCIA TOTAL'),
+      h('th', null, 'CATEGORÍA'), h('th', null, 'PRODUCTOS'), h('th', null, 'COMISIÓN PROM.'), h('th', null, 'GANANCIA TOTAL'),
     )),
     h('tbody', null,
       ...CATS.map(c => {
@@ -583,38 +583,38 @@ function AdminPanel() {
 
   return h('div', { class: 'admin-panel' },
     h('div', { class: 'admin-topbar' },
-      h('div', { class: 'admin-topbar-title' }, 'Selecto', h('span', null, '.'), ' â€” Panel admin'),
-      h('button', { class: 'btn btn-ghost btn-sm', style: { color: '#EEEAE1', borderColor: 'rgba(255,255,255,0.18)' }, onClick: () => { adminState.open = false; render(); } }, 'â† Volver al sitio'),
-      h('button', { class: 'btn btn-danger btn-sm', onClick: () => { adminState.loggedIn = false; adminState.open = false; render(); } }, 'Cerrar sesiÃ³n'),
+      h('div', { class: 'admin-topbar-title' }, 'Selecto', h('span', null, '.'), ' — Panel admin'),
+      h('button', { class: 'btn btn-ghost btn-sm', style: { color: '#EEEAE1', borderColor: 'rgba(255,255,255,0.18)' }, onClick: () => { adminState.open = false; render(); } }, '← Volver al sitio'),
+      h('button', { class: 'btn btn-danger btn-sm', onClick: () => { adminState.loggedIn = false; adminState.open = false; render(); } }, 'Cerrar sesión'),
     ),
     h('div', { class: 'admin-body' },
       h('div', { class: 'kpi-row' },
         h('div', { class: 'kpi' }, h('div', { class: 'kpi-num' }, String(all.length)), h('div', { class: 'kpi-label' }, 'productos activos')),
-        h('div', { class: 'kpi' }, h('div', { class: 'kpi-num' }, `${avgComm.toFixed(1)}%`), h('div', { class: 'kpi-label' }, 'comisiÃ³n promedio')),
+        h('div', { class: 'kpi' }, h('div', { class: 'kpi-num' }, `${avgComm.toFixed(1)}%`), h('div', { class: 'kpi-label' }, 'comisión promedio')),
         h('div', { class: 'kpi' }, h('div', { class: 'kpi-num green' }, `~${fmt(totalEarn)}`), h('div', { class: 'kpi-label' }, 'ganancia si se vende 1 de c/u')),
       ),
-      h('p', { class: 'admin-section-title' }, 'GANANCIA POR CATEGORÃA'),
+      h('p', { class: 'admin-section-title' }, 'GANANCIA POR CATEGORÍA'),
       commTable,
       h('p', { class: 'admin-section-title' }, `PRODUCTOS (${all.length})`),
       ...productList.filter(Boolean).flat(),
       h('button', { class: 'admin-add-btn', style: { marginTop: '12px' }, onClick: () => { adminState.modal = 'add'; editingProduct = null; render(); } }, '+ Agregar producto'),
       h('div', { style: { marginTop: '28px', paddingTop: '20px', borderTop: '1px solid rgba(255,255,255,0.08)' } },
-        h('button', { class: 'btn btn-ghost btn-sm', style: { color: '#938C80', borderColor: 'rgba(255,255,255,0.12)' }, onClick: () => { if (confirm('Â¿Restaurar productos por defecto? Se perderÃ¡n todos los cambios.')) { products = resetProducts(); render(); } } }, 'Restaurar productos por defecto'),
+        h('button', { class: 'btn btn-ghost btn-sm', style: { color: '#938C80', borderColor: 'rgba(255,255,255,0.12)' }, onClick: () => { if (confirm('¿Restaurar productos por defecto? Se perderán todos los cambios.')) { products = resetProducts(); render(); } } }, 'Restaurar productos por defecto'),
       ),
     ),
   );
 }
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ════════════════════════════════════════════════════════════════
 //  MAIN RENDER
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ════════════════════════════════════════════════════════════════
 function render() {
   const { view, sort } = state;
   const isHome = view === 'home';
   const all = products.map(buildVM);
 
   const SORT_DEFS = [
-    { key: 'vendidos', label: 'MÃ¡s vendidos' },
+    { key: 'vendidos', label: 'Más vendidos' },
     { key: 'precio', label: 'Menor precio' },
     { key: 'recomendado', label: 'Recomendado' },
   ];
@@ -634,12 +634,12 @@ function render() {
 
   const homeContent = isHome ? h('main', null,
     h('section', { class: 'hero' },
-      h('span', { class: 'hero-eyebrow' }, 'CURADURÃA Â· MERCADO LIBRE ARGENTINA'),
+      h('span', { class: 'hero-eyebrow' }, 'CURADURÍA · MERCADO LIBRE ARGENTINA'),
       h('h1', null, 'Lo mejor de Mercado Libre, ', h('em', null, 'elegido a mano'), '.'),
-      h('p', null, 'Los mÃ¡s vendidos, los de mejor precio y los de mayor descuento â€” investigados y seleccionados, no spam. ComprÃ¡s directo en Mercado Libre.'),
+      h('p', null, 'Los más vendidos, los de mejor precio y los de mayor descuento — investigados y seleccionados, no spam. Comprás directo en Mercado Libre.'),
       h('div', { class: 'stats' },
         h('div', null, h('div', { class: 'stat-num' }, String(all.length)), h('div', { class: 'stat-label' }, 'productos elegidos')),
-        h('div', null, h('div', { class: 'stat-num' }, String(CATS.length)), h('div', { class: 'stat-label' }, 'categorÃ­as')),
+        h('div', null, h('div', { class: 'stat-num' }, String(CATS.length)), h('div', { class: 'stat-label' }, 'categorías')),
       ),
     ),
     h('div', { class: 'sections' },
@@ -649,7 +649,7 @@ function render() {
         return h('section', { class: 'cat-section' },
           h('div', { class: 'section-head' },
             h('div', null, h('h2', null, c.label), h('div', { class: 'section-sub' }, `${items.length} productos seleccionados`)),
-            h('button', { class: 'see-all', onClick: () => setView(c.key) }, `Ver todos (${items.length}) â†’`),
+            h('button', { class: 'see-all', onClick: () => setView(c.key) }, `Ver todos (${items.length}) →`),
           ),
           h('div', { class: 'grid' }, ...items.slice(0, 6).map(Card)),
         );
@@ -663,7 +663,7 @@ function render() {
     const items = all.filter(x => x.cat === view).sort(COMPARATORS[effSort] || COMPARATORS.recomendado);
     return h('main', null,
       h('div', { class: 'cat-view' },
-        h('button', { class: 'back-btn', onClick: () => setView('home') }, 'â† Volver a todo'),
+        h('button', { class: 'back-btn', onClick: () => setView('home') }, '← Volver a todo'),
         h('div', { class: 'cat-view-head' },
           h('h1', null, c.label),
           h('span', { class: 'cat-meta' }, `${items.length} productos`),
@@ -682,14 +682,14 @@ function render() {
       h('div', { class: 'footer-top' },
         h('div', null,
           h('div', { class: 'footer-wordmark' }, 'Selecto', h('span', null, '.')),
-          h('p', { class: 'footer-legal' }, 'Esta pÃ¡gina contiene links de afiliados. Ganamos una comisiÃ³n si comprÃ¡s a travÃ©s de nuestros links, sin costo adicional para vos. Precios y disponibilidad sujetos a cambios en Mercado Libre.'),
+          h('p', { class: 'footer-legal' }, 'Esta página contiene links de afiliados. Ganamos una comisión si comprás a través de nuestros links, sin costo adicional para vos. Precios y disponibilidad sujetos a cambios en Mercado Libre.'),
         ),
         h('div', { class: 'footer-cols' },
           h('div', { class: 'footer-col' }, h('span', { class: 'footer-col-title' }, 'SITIO'), h('button', { class: 'footer-link', onClick: () => setView('home') }, 'Inicio')),
-          h('div', { class: 'footer-col' }, h('span', { class: 'footer-col-title' }, 'CATEGORÃAS'), ...CATS.map(c => h('button', { class: 'footer-link', onClick: () => setView(c.key) }, c.label))),
+          h('div', { class: 'footer-col' }, h('span', { class: 'footer-col-title' }, 'CATEGORÍAS'), ...CATS.map(c => h('button', { class: 'footer-link', onClick: () => setView(c.key) }, c.label))),
         ),
       ),
-      h('div', { class: 'footer-copy' }, 'Â© 2026 Selecto Â· Sitio independiente, no afiliado oficialmente a Mercado Libre S.A. Â· Hecho en Argentina'),
+      h('div', { class: 'footer-copy' }, '© 2026 Selecto · Sitio independiente, no afiliado oficialmente a Mercado Libre S.A. · Hecho en Argentina'),
     ),
   );
 
