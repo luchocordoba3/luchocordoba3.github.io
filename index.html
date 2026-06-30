@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Selecto Â· Lo mejor de Mercado Libre, elegido a mano</title>
+<meta name="description" content="SelecciÃ³n curada de los mejores productos de Mercado Libre Argentina: los mÃ¡s vendidos, los de mejor precio y los de mayor descuento. Investigados y elegidos a mano, no spam.">
+<meta name="author" content="Selecto">
+<meta name="theme-color" content="#EEEAE1">
+<meta name="robots" content="index, follow">
+<!-- Open Graph / redes sociales -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:title" content="Selecto Â· Lo mejor de Mercado Libre, elegido a mano">
+<meta property="og:description" content="Los mÃ¡s vendidos, los de mejor precio y los de mayor descuento de Mercado Libre Argentina â€” investigados y seleccionados.">
+<meta property="og:site_name" content="Selecto">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Selecto Â· Lo mejor de Mercado Libre, elegido a mano">
+<meta name="twitter:description" content="SelecciÃ³n curada de Mercado Libre Argentina â€” investigada y elegida a mano.">
+<!-- Favicon: cuadrado oscuro con 'S' serif + punto de acento (igual que el wordmark) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231B1915'/%3E%3Ctext x='15' y='23' font-family='Georgia,serif' font-size='21' fill='%23EEEAE1' text-anchor='middle'%3ES%3C/text%3E%3Ccircle cx='25' cy='9' r='3' fill='%23E5B80B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #EEEAE1; color: #1B1915; font-family: 'Hanken Grotesk', sans-serif; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #1B1915; color: #EEEAE1; }
+  *::-webkit-scrollbar { height: 8px; width: 8px; }
+  *::-webkit-scrollbar-thumb { background: rgba(27,25,21,0.18); border-radius: 8px; }
+
+  /* HEADER */
+  .header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(238,234,225,0.88);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(27,25,21,0.10);
+  }
+  .header-top { max-width: 1200px; margin: 0 auto; padding: 13px 22px; display: flex; align-items: center; gap: 18px; }
+  .wordmark {
+    display: flex; align-items: baseline; gap: 6px;
+    background: none; border: none; cursor: pointer; padding: 0;
+    font: 500 23px 'Newsreader', serif; letter-spacing: -0.01em; color: #1B1915;
+    user-select: none;
+  }
+  .wordmark-dot { width: 6px; height: 6px; border-radius: 50%; background: #E5B80B; display: inline-block; transition: transform .15s; }
+  .wordmark:active .wordmark-dot { transform: scale(1.5); }
+  .meta { font: 600 11px 'JetBrains Mono'; color: #938C80; letter-spacing: .04em; }
+  .cat-pills { max-width: 1200px; margin: 0 auto; padding: 0 22px 11px; display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; }
+  .cat-pills::-webkit-scrollbar { display: none; }
+  .pill { font: 600 13px 'Hanken Grotesk'; padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(27,25,21,0.18); cursor: pointer; white-space: nowrap; background: transparent; color: #1B1915; transition: background .15s, color .15s, border-color .15s; }
+  .pill.active { background: #1B1915; color: #FBFAF6; border-color: #1B1915; }
+
+  /* HERO */
+  .hero { max-width: 1200px; margin: 0 auto; padding: 54px 22px 34px; }
+  .hero-eyebrow { font: 600 11px 'JetBrains Mono'; letter-spacing: .14em; color: #938C80; }
+  .hero h1 { font: 400 clamp(34px,6vw,62px)/1.04 'Newsreader', serif; letter-spacing: -0.02em; margin: 14px 0 0; max-width: 17ch; color: #1B1915; }
+  .hero h1 em { font-style: italic; color: #E5B80B; }
+  .hero p { font: 400 clamp(15px,2vw,18px)/1.55 'Hanken Grotesk'; color: #5C564C; max-width: 54ch; margin: 18px 0 0; }
+  .stats { display: flex; gap: 30px; flex-wrap: wrap; margin-top: 30px; }
+  .stat-num { font: 700 27px 'JetBrains Mono'; color: #1B1915; }
+  .stat-label { font: 500 12px 'Hanken Grotesk'; color: #938C80; }
+
+  /* HOME SECTIONS */
+  .sections { max-width: 1200px; margin: 0 auto; padding: 0 22px; }
+  .cat-section { margin-bottom: 48px; }
+  .section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 14px; margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid rgba(27,25,21,0.13); }
+  .section-head h2 { font: 400 clamp(22px,3vw,30px) 'Newsreader', serif; margin: 0; color: #1B1915; }
+  .section-sub { font: 500 13px 'Hanken Grotesk'; color: #5C564C; }
+  .see-all { font: 600 13px 'Hanken Grotesk'; color: #1B1915; background: none; border: none; cursor: pointer; white-space: nowrap; }
+  .see-all:hover { text-decoration: underline; }
+
+  /* GRID */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; }
+
+  /* CARD */
+  .card { background: #FBFAF6; border: 1px solid rgba(27,25,21,0.10); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow .18s, transform .18s; }
+  .card:hover { box-shadow: 0 4px 18px rgba(27,25,21,0.09); transform: translateY(-2px); }
+  .card-img { position: relative; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; padding: 22px; background-image: repeating-linear-gradient(135deg, transparent 0 11px, rgba(27,25,21,0.022) 11px 12px); overflow: hidden; }
+  .card-img img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; padding: 14px; }
+  .card-img-name { font: 500 15px/1.3 'Newsreader', serif; color: #5C564C; text-align: center; position: relative; z-index: 1; }
+  .card-img-label { position: absolute; bottom: 9px; right: 10px; font: 600 9px 'JetBrains Mono'; color: #938C80; letter-spacing: .06em; }
+  .badges { position: absolute; top: 10px; left: 10px; display: flex; gap: 6px; flex-wrap: wrap; max-width: 80%; z-index: 2; }
+  .badge { font: 700 10px 'JetBrains Mono'; letter-spacing: .04em; padding: 5px 8px; border-radius: 6px; }
+  .badge-best { background: #1B1915; color: #FBFAF6; }
+  .badge-prem { background: #FBFAF6; color: #1B1915; border: 1px solid rgba(27,25,21,0.25); }
+  .badge-off { background: #FBFAF6; color: #C24A2B; border: 1px solid rgba(194,74,43,0.3); }
+  .card-body { padding: 14px 14px 15px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .card-cat { font: 600 10px 'JetBrains Mono'; letter-spacing: .08em; text-transform: uppercase; color: #938C80; }
+  .card-name { font: 600 15px/1.3 'Hanken Grotesk'; margin: 0; color: #1B1915; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 39px; }
+  .card-sold { font: 500 12px 'Hanken Grotesk'; color: #3C7A52; }
+  .price-row { display: flex; align-items: baseline; gap: 8px; margin-top: 2px; }
+  .price { font: 700 20px 'JetBrains Mono'; color: #1B1915; }
+  .price-old { font: 500 13px 'JetBrains Mono'; color: #938C80; text-decoration: line-through; }
+  .free-ship { font: 600 11px 'Hanken Grotesk'; color: #3C7A52; }
+  .cta { margin-top: auto; display: block; text-align: center; text-decoration: none; font: 700 13px 'Hanken Grotesk'; padding: 11px; border-radius: 9px; background: #E5B80B; color: #1B1915; transition: opacity .15s; }
+  .cta:hover { opacity: .88; }
+
+  /* CATEGORY VIEW */
+  .cat-view { max-width: 1200px; margin: 0 auto; padding: 24px 22px 0; }
+  .back-btn { font: 600 12px 'Hanken Grotesk'; color: #5C564C; background: none; border: none; cursor: pointer; padding: 0; }
+  .back-btn:hover { color: #1B1915; }
+  .cat-view-head { margin: 14px 0 6px; display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .cat-view-head h1 { font: 400 clamp(28px,4vw,42px) 'Newsreader', serif; margin: 0; color: #1B1915; }
+  .cat-meta { font: 600 12px 'JetBrains Mono'; color: #938C80; }
+  .sort-bar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 14px 0 22px; border-bottom: 1px solid rgba(27,25,21,0.13); margin-bottom: 22px; }
+  .sort-label { font: 600 11px 'JetBrains Mono'; color: #938C80; letter-spacing: .06em; }
+  .sort-btn { font: 600 12px 'Hanken Grotesk'; padding: 7px 12px; border-radius: 8px; cursor: pointer; border: 1px solid rgba(27,25,21,0.15); background: #FBFAF6; color: #1B1915; transition: background .15s, color .15s, border-color .15s; }
+  .sort-btn.active { background: #1B1915; color: #FBFAF6; border-color: #1B1915; }
+
+  /* FOOTER */
+  footer { border-top: 1px solid rgba(27,25,21,0.12); margin-top: 56px; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; padding: 34px 22px 48px; }
+  .footer-top { display: flex; flex-wrap: wrap; gap: 28px; justify-content: space-between; align-items: flex-start; }
+  .footer-wordmark { font: 500 21px 'Newsreader', serif; color: #1B1915; }
+  .footer-wordmark span { color: #E5B80B; }
+  .footer-legal { font: 400 13px/1.6 'Hanken Grotesk'; color: #5C564C; margin: 10px 0 0; max-width: 46ch; }
+  .footer-cols { display: flex; gap: 44px; flex-wrap: wrap; }
+  .footer-col { display: flex; flex-direction: column; gap: 9px; }
+  .footer-col-title { font: 600 11px 'JetBrains Mono'; color: #938C80; letter-spacing: .06em; }
+  .footer-link { font: 500 13px 'Hanken Grotesk'; color: #1B1915; background: none; border: none; cursor: pointer; padding: 0; text-align: left; }
+  .footer-link:hover { text-decoration: underline; }
+  .footer-copy { margin-top: 30px; padding-top: 18px; border-top: 1px solid rgba(27,25,21,0.10); font: 500 12px 'Hanken Grotesk'; color: #938C80; }
+
+  /* â”€â”€ MODAL BASE â”€â”€ */
+  .overlay { position: fixed; inset: 0; background: rgba(27,25,21,0.5); backdrop-filter: blur(4px); z-index: 200; display: flex; align-items: center; justify-content: center; padding: 22px; }
+  .modal { background: #FBFAF6; border-radius: 18px; width: 100%; max-width: 420px; box-shadow: 0 24px 60px rgba(27,25,21,0.18); overflow: hidden; }
+  .modal-head { padding: 26px 26px 0; }
+  .modal-title { font: 500 22px 'Newsreader', serif; color: #1B1915; margin: 0 0 6px; }
+  .modal-sub { font: 400 13px 'Hanken Grotesk'; color: #5C564C; margin: 0 0 20px; }
+  .modal-body { padding: 0 26px 26px; }
+  .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+  .field label { font: 600 11px 'JetBrains Mono'; letter-spacing: .06em; color: #938C80; }
+  .field input, .field select, .field textarea {
+    font: 500 14px 'Hanken Grotesk'; color: #1B1915;
+    border: 1.5px solid rgba(27,25,21,0.18); border-radius: 9px;
+    padding: 9px 12px; background: #EEEAE1; outline: none; width: 100%;
+    transition: border-color .15s;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus { border-color: #1B1915; }
+  .field textarea { resize: vertical; min-height: 60px; }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .field-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  .field-check { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .field-check input[type=checkbox] { width: 16px; height: 16px; cursor: pointer; accent-color: #1B1915; }
+  .field-check label { font: 500 13px 'Hanken Grotesk'; color: #1B1915; cursor: pointer; }
+  .btn { font: 700 13px 'Hanken Grotesk'; padding: 11px 18px; border-radius: 9px; border: none; cursor: pointer; transition: opacity .15s; }
+  .btn:hover { opacity: .85; }
+  .btn-primary { background: #1B1915; color: #FBFAF6; width: 100%; }
+  .btn-accent { background: #E5B80B; color: #1B1915; }
+  .btn-ghost { background: transparent; color: #5C564C; border: 1.5px solid rgba(27,25,21,0.18); }
+  .btn-danger { background: #C24A2B; color: #FBFAF6; }
+  .btn-sm { padding: 6px 11px; font-size: 12px; border-radius: 7px; }
+  .modal-footer { display: flex; gap: 10px; justify-content: flex-end; padding-top: 8px; }
+  .error-msg { font: 500 12px 'Hanken Grotesk'; color: #C24A2B; margin-top: -8px; margin-bottom: 8px; }
+
+  /* â”€â”€ ADMIN PANEL â”€â”€ */
+  .admin-panel { position: fixed; inset: 0; z-index: 300; display: flex; flex-direction: column; background: #1B1915; color: #EEEAE1; }
+  .admin-topbar { display: flex; align-items: center; gap: 14px; padding: 16px 24px; border-bottom: 1px solid rgba(255,255,255,0.08); flex-shrink: 0; }
+  .admin-topbar-title { font: 500 18px 'Newsreader', serif; color: #EEEAE1; flex: 1; }
+  .admin-topbar-title span { color: #E5B80B; }
+  .admin-body { flex: 1; overflow-y: auto; padding: 24px; max-width: 960px; margin: 0 auto; width: 100%; }
+  .admin-section-title { font: 600 11px 'JetBrains Mono'; letter-spacing: .08em; color: #938C80; margin: 0 0 14px; }
+  .kpi-row { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 28px; }
+  .kpi { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 16px 20px; flex: 1; min-width: 140px; }
+  .kpi-num { font: 700 24px 'JetBrains Mono'; color: #E5B80B; }
+  .kpi-num.green { color: #5BBE82; }
+  .kpi-label { font: 500 12px 'Hanken Grotesk'; color: #938C80; margin-top: 4px; }
+  .product-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 28px; }
+  .product-row { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.05); border-radius: 10px; padding: 10px 14px; border: 1px solid rgba(255,255,255,0.07); }
+  .product-row-img { width: 40px; height: 40px; border-radius: 8px; object-fit: contain; background: #FBFAF6; flex-shrink: 0; }
+  .product-row-img-placeholder { width: 40px; height: 40px; border-radius: 8px; background: rgba(255,255,255,0.08); flex-shrink: 0; display: flex; align-items: center; justify-content: center; font: 700 14px 'JetBrains Mono'; color: #5C564C; }
+  .product-row-info { flex: 1; min-width: 0; }
+  .product-row-name { font: 600 13px 'Hanken Grotesk'; color: #EEEAE1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .product-row-meta { font: 500 11px 'JetBrains Mono'; color: #938C80; margin-top: 2px; }
+  .product-row-actions { display: flex; gap: 6px; flex-shrink: 0; }
+  .tag { display: inline-block; font: 600 9px 'JetBrains Mono'; letter-spacing: .04em; padding: 3px 7px; border-radius: 999px; margin-left: 6px; }
+  .tag-best { background: #E5B80B; color: #1B1915; }
+  .tag-prem { background: rgba(255,255,255,0.12); color: #EEEAE1; }
+  .admin-add-btn { display: flex; align-items: center; gap: 8px; background: rgba(229,184,11,0.12); border: 1.5px dashed rgba(229,184,11,0.35); border-radius: 10px; padding: 14px; color: #E5B80B; font: 600 13px 'Hanken Grotesk'; cursor: pointer; width: 100%; justify-content: center; transition: background .15s; }
+  .admin-add-btn:hover { background: rgba(229,184,11,0.2); }
+  .comm-table { width: 100%; border-collapse: collapse; font: 500 13px 'Hanken Grotesk'; margin-bottom: 28px; }
+  .comm-table th { font: 600 10px 'JetBrains Mono'; letter-spacing: .06em; color: #938C80; text-align: left; padding: 8px 12px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .comm-table td { padding: 9px 12px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #EEEAE1; }
+  .comm-table tr:last-child td { border-bottom: none; }
+  .comm-earn { font: 700 12px 'JetBrains Mono'; color: #5BBE82; }
+  .comm-pct { font: 700 12px 'JetBrains Mono'; color: #E5B80B; }
+  .img-preview { width: 100%; max-height: 120px; object-fit: contain; border-radius: 8px; background: #EEEAE1; margin-top: 8px; display: none; }
+  .img-preview.show { display: block; }
+
+  @media (max-width: 480px) {
+    .grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+    .meta { display: none; }
+    .field-row, .field-row-3 { grid-template-columns: 1fr; }
+    .product-row-actions .btn-ghost { display: none; }
+  }
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script>
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+//  CONFIGURACIÃ“N
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+const ADMIN_PASSWORD = 'selecto2026'; // â† cambiÃ¡ la contraseÃ±a acÃ¡
+const LOGO_CLICKS_NEEDED = 5;
+const STORAGE_KEY = 'selecto_products_v3';
+const ML_IMG = 'https://http2.mlstatic.com/'; // base de imÃ¡genes de Mercado Libre
+
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+//  CATEGORÃAS (label + color). La comisiÃ³n es por producto.
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+const CATS = [
+  { key: 'moda',    label: 'Moda y Accesorios',   tint: '#E7E0D2' },
+  { key: 'belleza', label: 'Belleza y Cuidado',   tint: '#ECE0E2' },
+  { key: 'deporte', label: 'Deporte y Fitness',   tint: '#DBE5DD' },
+  { key: 'hogar',   label: 'Hogar y Electro',     tint: '#E4E2DA' },
+  { key: 'audio',   label: 'ElectrÃ³nica y Audio', tint: '#DEE2E6' },
+  { key: 'tech',    label: 'Celulares y Tech',    tint: '#E0DEE6' },
+];
+
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+//  PRODUCTOS â€” catÃ¡logo real del programa de afiliados de ML.
+//  Cada uno con su comisiÃ³n real (comm) y link de afiliado (meli.la).
+//  EditÃ¡ todo desde el panel admin (5 clics en el logo).
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+const DEFAULT_PRODUCTS = [
+  // â”€â”€ MODA Y ACCESORIOS â”€â”€
+  { id:'m1', name:'Valija Carry On Cabina 20" 4 Ruedas', cat:'moda', price:119999, old:0, comm:15, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/1uLMZ9b', image:ML_IMG+'D_Q_NP_2X_749399-MLA99453766496_112025-AB.webp' },
+  { id:'m2', name:'Mochila Antirrobo Porta Notebook',    cat:'moda', price:31999,  old:0, comm:15, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/1v2u7Da', image:ML_IMG+'D_Q_NP_2X_614419-MLA85706408643_062025-AB.webp' },
+  { id:'m3', name:'Boxer Calvin Klein (Caja)',           cat:'moda', price:10590,  old:0, comm:15, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/2QjAgW6', image:ML_IMG+'D_Q_NP_2X_963332-MLA82234338810_022025-AB.webp' },
+  { id:'m4', name:'Zapatillas Topper Tie Break III',     cat:'moda', price:84900,  old:0, comm:15, best:false, premium:false, sold:'', affiliateUrl:'https://meli.la/1eCgtnG', image:ML_IMG+'D_Q_NP_2X_911668-MLA110740754055_042026-AB.webp' },
+  { id:'m5', name:'Buzo Hoodie Canguro con Capucha',     cat:'moda', price:39999,  old:0, comm:15, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/21Bc9pG', image:ML_IMG+'D_Q_NP_2X_621727-MLA110535940285_042026-AB.webp' },
+  { id:'m6', name:'Jogging Friza Hombre con PuÃ±o',       cat:'moda', price:23000,  old:0, comm:15, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/2XoReFj', image:ML_IMG+'D_Q_NP_2X_905640-MLA112632321600_062026-AB.webp' },
+  { id:'m7', name:'Campera Parka Baker TÃ©rmica',         cat:'moda', price:299990, old:0, comm:15, best:true,  premium:true,  sold:'', affiliateUrl:'https://meli.la/2xthujD', image:ML_IMG+'D_Q_NP_2X_904534-MLA112320018053_052026-AB.webp' },
+
+  // â”€â”€ BELLEZA Y CUIDADO â”€â”€
+  { id:'b1', name:'Combo Valca RegeneraciÃ³n Intensiva',  cat:'belleza', price:63790, old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/167ygyF', image:ML_IMG+'D_Q_NP_2X_791777-MLA106187447246_022026-AB.webp' },
+  { id:'b2', name:'Acondicionador Elvive Glycolic 400ml',cat:'belleza', price:12489, old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/1xWpkrL', image:ML_IMG+'D_Q_NP_2X_891761-MLA99338428386_112025-AB.webp' },
+  { id:'b3', name:'Zaleas Protector de Cama x10',        cat:'belleza', price:5799,  old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/2qakctg', image:ML_IMG+'D_Q_NP_2X_716443-MLA109694874583_032026-AB.webp' },
+  { id:'b4', name:'Equipo de Alta Frecuencia Gadnic LF60',cat:'belleza',price:79949, old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/1GFvSfq', image:ML_IMG+'D_Q_NP_2X_678865-MLA91655044961_092025-AB.webp' },
+  { id:'b5', name:'JabÃ³n Dove Tocador Pack x3',          cat:'belleza', price:6405,  old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/1e5o159', image:ML_IMG+'D_Q_NP_2X_859674-MLA99928911273_112025-AB.webp' },
+  { id:'b6', name:'Cepillo Secador y Moldeador',         cat:'belleza', price:67049, old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/322aSMt', image:ML_IMG+'D_Q_NP_2X_913911-MLA100115203113_122025-AB.webp' },
+  { id:'b7', name:'Afeitadora ElÃ©ctrica VGR V-325',      cat:'belleza', price:79580, old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/1aVguwN', image:ML_IMG+'D_Q_NP_2X_781043-MLA99501107520_112025-AB.webp' },
+
+  // â”€â”€ DEPORTE Y FITNESS â”€â”€
+  { id:'d1', name:'Pistola Fox CO2 P92 + Balines',       cat:'deporte', price:162375, old:0, comm:15, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/2Y6U8ku', image:ML_IMG+'D_Q_NP_2X_651896-MLA108326941711_032026-AB.webp' },
+  { id:'d2', name:'Termo Acero Inoxidable Philco 1L',    cat:'deporte', price:64129,  old:0, comm:15, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/2TZ79as', image:ML_IMG+'D_Q_NP_2X_631041-MLA110079025647_042026-AB.webp' },
+  { id:'d3', name:'Linterna TÃ¡ctica Recargable USB',     cat:'deporte', price:25338,  old:0, comm:15, best:false, premium:false, sold:'', affiliateUrl:'https://meli.la/2qjjbY7', image:ML_IMG+'D_Q_NP_2X_611320-CBT105626236575_012026-AB.webp' },
+  { id:'d4', name:'Banco de Pesas Plano Regulable',      cat:'deporte', price:260000, old:0, comm:15, best:true,  premium:true,  sold:'', affiliateUrl:'https://meli.la/2H2MvEu', image:ML_IMG+'D_Q_NP_2X_884173-MLA99976836259_112025-AB.webp' },
+  { id:'d5', name:'Vaso TÃ©rmico 1200ml Antiderrame',     cat:'deporte', price:59999,  old:0, comm:15, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/2vQxbKY', image:ML_IMG+'D_Q_NP_2X_838577-MLA110815921239_042026-AB.webp' },
+  { id:'d6', name:'Mini Escalador Stepper con Monitor',  cat:'deporte', price:109988, old:0, comm:15, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/1GqAHvx', image:ML_IMG+'D_Q_NP_2X_623235-MLA100475637884_122025-AB.webp' },
+  { id:'d7', name:'Camiseta adidas SelecciÃ³n Argentina', cat:'deporte', price:59999,  old:0, comm:15, best:false, premium:false, sold:'', affiliateUrl:'https://meli.la/1MHjEfY', image:ML_IMG+'D_Q_NP_2X_622100-MLA108322167768_032026-AB.webp' },
+
+  // â”€â”€ HOGAR Y ELECTRO â”€â”€
+  { id:'h1', name:'Planchita + Secador de Pelo Suono',   cat:'hogar', price:60299,  old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/29vrFn6', image:ML_IMG+'D_Q_NP_2X_621187-MLA110224385769_042026-AB.webp' },
+  { id:'h2', name:'Mixer Ultracomb Vaso 800ml',          cat:'hogar', price:99999,  old:0, comm:7,  best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/16nEVeU', image:ML_IMG+'D_Q_NP_2X_833200-MLA112800840045_062026-AB.webp' },
+  { id:'h3', name:'Aspiradora Robot Trapeadora Fika',    cat:'hogar', price:249371, old:0, comm:7,  best:true, premium:true,  sold:'', affiliateUrl:'https://meli.la/1UiJmYA', image:ML_IMG+'D_Q_NP_2X_841864-MLA110301587450_052026-AB.webp' },
+  { id:'h4', name:'Balanza Digital con Bluetooth',       cat:'hogar', price:27999,  old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/2xMehu2', image:ML_IMG+'D_Q_NP_2X_924343-MLA111544207435_052026-AB.webp' },
+  { id:'h5', name:'MÃ¡quina de Coser Naku MC-002',        cat:'hogar', price:94999,  old:0, comm:7,  best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/2WKDP4x', image:ML_IMG+'D_Q_NP_2X_767063-MLA83333016114_042025-AB.webp' },
+  { id:'h6', name:'Nebulizador Mesh PortÃ¡til',           cat:'hogar', price:16299,  old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/247Sfxt', image:ML_IMG+'D_Q_NP_2X_680372-MLA113685888697_062026-AB.webp' },
+  { id:'h7', name:'Secador de Pelo Daewoo 2100W',        cat:'hogar', price:79950,  old:0, comm:15, best:true, premium:false, sold:'', affiliateUrl:'https://meli.la/2aLUX6C', image:ML_IMG+'D_Q_NP_2X_872804-MLA99453742720_112025-AB.webp' },
+
+  // â”€â”€ ELECTRÃ“NICA Y AUDIO â”€â”€
+  { id:'a1', name:'MicrÃ³fono InalÃ¡mbrico Corbatero',     cat:'audio', price:29999,   old:0, comm:7, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/1H425Vj', image:ML_IMG+'D_Q_NP_2X_903296-MLA95640245888_102025-AB.webp' },
+  { id:'a2', name:'Proyector LÃ¡ser Multipunto',          cat:'audio', price:30433,   old:0, comm:7, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/2JRnbRm', image:ML_IMG+'D_Q_NP_2X_939688-MLA91955283971_092025-AB.webp' },
+  { id:'a3', name:'Mini Drone Plegable 4K',              cat:'audio', price:54999,   old:0, comm:7, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/2hQ7FYt', image:ML_IMG+'D_Q_NP_2X_609415-MLA99558490224_122025-AB.webp' },
+  { id:'a4', name:'TV Stick Wi-Fi Android',              cat:'audio', price:32989,   old:0, comm:7, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/1iAiway', image:ML_IMG+'D_Q_NP_2X_810140-MLA99989898035_112025-AB.webp' },
+  { id:'a5', name:'Cable Coaxial RG6 15m',               cat:'audio', price:7990,    old:0, comm:7, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/2BwTJ97', image:ML_IMG+'D_Q_NP_2X_931726-MLA96412238153_102025-AB.webp' },
+  { id:'a6', name:'Microcomponente de Audio',            cat:'audio', price:293332,  old:0, comm:7, best:false, premium:true,  sold:'', affiliateUrl:'https://meli.la/18pfUUk', image:ML_IMG+'D_Q_NP_2X_905328-MLA108805785735_032026-AB.webp' },
+  { id:'a7', name:'Smart TV TCL 55" 4K Google TV',       cat:'audio', price:1099999, old:0, comm:7, best:true,  premium:true,  sold:'', affiliateUrl:'https://meli.la/1VTgW44', image:ML_IMG+'D_Q_NP_2X_900058-MLA108865608835_032026-AB.webp' },
+
+  // â”€â”€ CELULARES Y TECH â”€â”€
+  { id:'t1', name:'TelÃ©fono de LÃ­nea Fijo',              cat:'tech', price:29950,  old:0, comm:7, best:false, premium:false, sold:'', affiliateUrl:'https://meli.la/1dniGQJ', image:ML_IMG+'D_Q_NP_2X_916729-MLA112312899802_062026-AB.webp' },
+  { id:'t2', name:'Xiaomi Smart Band 9 Active',          cat:'tech', price:54999,  old:0, comm:7, best:false, premium:false, sold:'', affiliateUrl:'https://meli.la/2gKyNzg', image:ML_IMG+'D_Q_NP_2X_606345-MLA103742072561_012026-AB.webp' },
+  { id:'t3', name:'Soporte Apoya Celular/Tablet',        cat:'tech', price:9249,   old:0, comm:7, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/1Wa8vL5', image:ML_IMG+'D_Q_NP_2X_697342-MLA96002656438_102025-AB.webp' },
+  { id:'t4', name:'MicroSD 64GB Kingston Canvas',        cat:'tech', price:29898,  old:0, comm:7, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/1oF9PDJ', image:ML_IMG+'D_Q_NP_2X_784493-MLA99443950268_112025-AB.webp' },
+  { id:'t5', name:'Xiaomi Redmi Buds 6 Play',            cat:'tech', price:29701,  old:0, comm:7, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/1BwxjrQ', image:ML_IMG+'D_Q_NP_2X_714087-MLA96151231035_102025-AB.webp' },
+  { id:'t6', name:'Cargador Fast Apple Original',        cat:'tech', price:99999,  old:0, comm:7, best:false, premium:false, sold:'', affiliateUrl:'https://meli.la/1ZfxbE2', image:ML_IMG+'D_Q_NP_2X_909488-MLA95706159082_102025-AB.webp' },
+  { id:'t7', name:'Aro de Luz LED 30cm',                 cat:'tech', price:24999,  old:0, comm:7, best:true,  premium:false, sold:'', affiliateUrl:'https://meli.la/1LxGb6W', image:ML_IMG+'D_Q_NP_2X_647519-MLA99849365773_112025-AB.webp' },
+];
+
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+//  PERSISTENCE
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+function loadProducts() {
+  try { const s = localStorage.getItem(STORAGE_KEY); if (s) return JSON.parse(s); } catch {}
+  return DEFAULT_PRODUCTS.map(p => ({ ...p }));
+}
+function saveProducts(prods) { localStorage.setItem(STORAGE_KEY, JSON.stringify(prods)); }
+function resetProducts() { saveProducts(DEFAULT_PRODUCTS.map(p => ({ ...p }))); return loadProducts(); }
+
+// â”€â”€ CATÃLOGO REMOTO (opcional, para el futuro) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// Hoy los productos viven en DEFAULT_PRODUCTS (acÃ¡ arriba) y se editan
+// desde el panel admin (se guardan en localStorage, sÃ³lo en tu dispositivo).
+// Si mÃ¡s adelante querÃ©s servir el catÃ¡logo desde un JSON publicado
+// (CMS, GitHub, Google Sheets exportado a JSON, etc.) sin tocar este archivo,
+// descomentÃ¡ esto y ponÃ© la URL. Cae a DEFAULT_PRODUCTS si falla.
+//
+// const REMOTE_CATALOG_URL = 'https://tu-dominio.com/productos.json';
+// async function loadRemoteCatalog() {
+//   try {
+//     const res = await fetch(REMOTE_CATALOG_URL, { cache: 'no-store' });
+//     if (!res.ok) return;
+//     const data = await res.json();
+//     if (Array.isArray(data) && data.length) { products = data; render(); }
+//   } catch (e) { /* sin conexiÃ³n / JSON invÃ¡lido â†’ se usa el catÃ¡logo local */ }
+// }
+// loadRemoteCatalog();
+
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+//  HELPERS
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+const fmt = n => '$' + Math.round(n).toLocaleString('es-AR');
+const catOf = k => CATS.find(c => c.key === k);
+const uid = () => Math.random().toString(36).slice(2, 9);
+
+function buildVM(p) {
+  const c = catOf(p.cat) || CATS[0];
+  const comm = p.comm || 0;
+  const earn = Math.round(p.price * comm / 100);
+  const off = (p.old && p.old > 0) ? Math.round((1 - p.price / p.old) * 100) : 0;
+  return {
+    ...p,
+    catLabel: c.label, tint: c.tint,
+    priceStr: fmt(p.price),
+    hasOld: !!(p.old && p.old > 0), oldStr: (p.old && p.old > 0) ? fmt(p.old) : '',
+    off, hasOff: off > 0, offStr: `-${off}%`,
+    showPrem: !p.best && !!p.premium,
+    hasSold: !!(p.sold && p.sold.trim()),
+    comm, totalStr: `${comm}%`, earn, earnStr: fmt(earn),
+    url: p.affiliateUrl || '#',
+  };
+}
+
+const COMPARATORS = {
+  recomendado: (a,b) => (b.best-a.best)||(b.hasSold-a.hasSold)||(b.off-a.off)||(a.price-b.price),
+  vendidos:    (a,b) => (b.best-a.best)||(b.hasSold-a.hasSold)||(b.price-a.price),
+  descuento:   (a,b) => (b.off-a.off)||(a.price-b.price),
+  precio:      (a,b) => (a.price-b.price),
+  comision:    (a,b) => (b.comm-a.comm)||(b.earn-a.earn),
+  ganancia:    (a,b) => (b.earn-a.earn),
+};
+
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+//  STATE
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+let products = loadProducts();
+let state = { view: 'home', sort: 'recomendado' };
+let adminState = { open: false, loggedIn: false, modal: null };
+let editingProduct = null;
+let logoClickCount = 0;
+let logoClickTimer = null;
+
+function setState(patch) { state = { ...state, ...patch }; render(); }
+function setView(v) {
+  setState({ view: v, sort: v === 'home' ? 'recomendado' : 'vendidos' });
+  requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
+function setSort(s) { setState({ sort: s }); }
+
+function onLogoClick() {
+  logoClickCount++;
+  clearTimeout(logoClickTimer);
+  if (logoClickCount >= LOGO_CLICKS_NEEDED) {
+    logoClickCount = 0;
+    if (!adminState.loggedIn) adminState = { ...adminState, open: false, modal: 'login' };
+    else adminState = { ...adminState, open: true, modal: null };
+    render();
+    return;
+  }
+  logoClickTimer = setTimeout(() => { logoClickCount = 0; }, 800);
+}
+
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+//  DOM HELPERS
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+function el(tag, attrs, ...children) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (k === 'class') e.className = v;
+    else if (k === 'style') Object.assign(e.style, v);
+    else if (k.startsWith('on')) e.addEventListener(k.slice(2).toLowerCase(), v);
+    else e.setAttribute(k, v);
+  }
+  for (const c of children.flat(Infinity)) {
+    if (c == null || c === false) continue;
+    e.append(typeof c === 'string' ? document.createTextNode(c) : c);
+  }
+  return e;
+}
+const h = el;
+
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+//  CARD (vista pÃºblica â€” NO muestra comisiÃ³n ni ganancia)
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+function Card(it) {
+  const imgEl = it.image
+    ? h('img', { src: it.image, alt: it.name, loading: 'lazy' })
+    : h('span', { class: 'card-img-name' }, it.name);
+
+  return h('article', { class: 'card' },
+    h('div', { class: 'card-img', style: { background: it.tint } },
+      imgEl,
+      h('div', { class: 'badges' },
+        it.best && h('span', { class: 'badge badge-best' }, 'â˜… MÃS VENDIDO'),
+        it.showPrem && h('span', { class: 'badge badge-prem' }, 'TICKET ALTO'),
+        it.hasOff && h('span', { class: 'badge badge-off' }, it.offStr),
+      ),
+      !it.image && h('span', { class: 'card-img-label' }, 'FOTO ML'),
+    ),
+    h('div', { class: 'card-body' },
+      h('span', { class: 'card-cat' }, it.catLabel),
+      h('h3', { class: 'card-name' }, it.name),
+      it.hasSold && h('span', { class: 'card-sold' }, it.sold),
+      h('div', { class: 'price-row' },
+        h('span', { class: 'price' }, it.priceStr),
+        it.hasOld && h('span', { class: 'price-old' }, it.oldStr),
+      ),
+      h('span', { class: 'free-ship' }, 'âœ“ EnvÃ­o gratis'),
+      h('a', { class: 'cta', href: it.url, target: '_blank', rel: 'noopener noreferrer' }, 'Ver en Mercado Libre â†’'),
+    ),
+  );
+}
+
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+//  LOGIN MODAL
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+function LoginModal() {
+  const inp = h('input', { type: 'password', placeholder: 'ContraseÃ±a', style: { marginBottom: '14px' } });
+  const err = h('p', { class: 'error-msg', style: { display: 'none' } }, 'ContraseÃ±a incorrecta.');
+  function tryLogin() {
+    if (inp.value === ADMIN_PASSWORD) { adminState = { open: true, loggedIn: true, modal: null }; render(); }
+    else { err.style.display = 'block'; inp.value = ''; inp.focus(); }
+  }
+  inp.addEventListener('keydown', e => { if (e.key === 'Enter') tryLogin(); });
+  return h('div', { class: 'overlay', onClick: e => { if (e.target === e.currentTarget) { adminState.modal = null; render(); } } },
+    h('div', { class: 'modal' },
+      h('div', { class: 'modal-head' },
+        h('p', { class: 'modal-title' }, 'Acceso admin'),
+        h('p', { class: 'modal-sub' }, 'IngresÃ¡ tu contraseÃ±a para continuar.'),
+      ),
+      h('div', { class: 'modal-body' },
+        h('div', { class: 'field' }, h('label', null, 'CONTRASEÃ‘A'), inp),
+        err,
+        h('button', { class: 'btn btn-primary', onClick: tryLogin }, 'Entrar'),
+      ),
+    ),
+  );
+}
+
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+//  PRODUCT FORM MODAL (add / edit)
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+function ProductFormModal(existing) {
+  const isEdit = !!existing;
+  const p = existing || { id: uid(), name: '', cat: 'moda', price: '', old: '', comm: 15, best: false, premium: false, sold: '', affiliateUrl: '', image: '' };
+
+  const fName = h('input', { type: 'text', value: p.name, placeholder: 'Ej: Zapatillas Nike Air Max' });
+  const fCat = h('select', null, ...CATS.map(c => { const o = h('option', { value: c.key }, c.label); if (c.key === p.cat) o.selected = true; return o; }));
+  const fPrice = h('input', { type: 'number', value: p.price || '', placeholder: '120000' });
+  const fOld = h('input', { type: 'number', value: (p.old && p.old > 0) ? p.old : '', placeholder: 'Opcional' });
+  const fComm = h('input', { type: 'number', value: p.comm || '', placeholder: '15' });
+  const fBest = h('input', { type: 'checkbox' }); if (p.best) fBest.checked = true;
+  const fPrem = h('input', { type: 'checkbox' }); if (p.premium) fPrem.checked = true;
+  const fSold = h('input', { type: 'text', value: p.sold || '', placeholder: 'Ej: +100.000 vendidos' });
+  const fUrl = h('input', { type: 'url', value: p.affiliateUrl || '', placeholder: 'https://meli.la/... (link de afiliado)' });
+  const fImg = h('input', { type: 'url', value: p.image || '', placeholder: 'https://http2.mlstatic.com/...' });
+  const imgPreview = h('img', { class: `img-preview${p.image ? ' show' : ''}`, src: p.image || '', alt: '' });
+  fImg.addEventListener('input', () => { const v = fImg.value.trim(); imgPreview.src = v; imgPreview.className = `img-preview${v ? ' show' : ''}`; });
+  const errEl = h('p', { class: 'error-msg', style: { display: 'none' } }, '');
+
+  function save() {
+    const name = fName.value.trim();
+    const price = parseFloat(fPrice.value);
+    const url = fUrl.value.trim();
+    if (!name) { errEl.textContent = 'El nombre es requerido.'; errEl.style.display = 'block'; return; }
+    if (!price || price <= 0) { errEl.textContent = 'El precio debe ser mayor a 0.'; errEl.style.display = 'block'; return; }
+    if (!url) { errEl.textContent = 'El link de afiliado es requerido.'; errEl.style.display = 'block'; return; }
+    const updated = {
+      id: p.id, name, cat: fCat.value, price,
+      old: parseFloat(fOld.value) || 0,
+      comm: parseFloat(fComm.value) || 0,
+      best: fBest.checked, premium: fPrem.checked,
+      sold: fSold.value.trim(), affiliateUrl: url, image: fImg.value.trim(),
+    };
+    if (isEdit) { const idx = products.findIndex(x => x.id === p.id); if (idx !== -1) products[idx] = updated; }
+    else products.push(updated);
+    saveProducts(products); adminState.modal = null; render();
+  }
+  function remove() {
+    if (!confirm(`Â¿Eliminar "${p.name}"?`)) return;
+    products = products.filter(x => x.id !== p.id);
+    saveProducts(products); adminState.modal = null; render();
+  }
+
+  return h('div', { class: 'overlay', onClick: e => { if (e.target === e.currentTarget) { adminState.modal = null; render(); } } },
+    h('div', { class: 'modal', style: { maxWidth: '520px', maxHeight: '90vh', overflowY: 'auto' } },
+      h('div', { class: 'modal-head' },
+        h('p', { class: 'modal-title' }, isEdit ? 'Editar producto' : 'Agregar producto'),
+        h('p', { class: 'modal-sub' }, 'Los cambios se guardan automÃ¡ticamente en este dispositivo.'),
+      ),
+      h('div', { class: 'modal-body' },
+        h('div', { class: 'field' }, h('label', null, 'NOMBRE'), fName),
+        h('div', { class: 'field' }, h('label', null, 'CATEGORÃA'), fCat),
+        h('div', { class: 'field-row-3' },
+          h('div', { class: 'field' }, h('label', null, 'PRECIO ($)'), fPrice),
+          h('div', { class: 'field' }, h('label', null, 'P. ANTERIOR'), fOld),
+          h('div', { class: 'field' }, h('label', null, 'COMISIÃ“N %'), fComm),
+        ),
+        h('div', { class: 'field-check' }, fBest, h('label', null, 'â˜… MÃ¡s vendido')),
+        h('div', { class: 'field-check' }, fPrem, h('label', null, 'Ticket alto (Premium)')),
+        h('div', { class: 'field' }, h('label', null, 'TEXTO DE VENTAS'), fSold),
+        h('div', { class: 'field' }, h('label', null, 'LINK DE AFILIADO (meli.la)'), fUrl),
+        h('div', { class: 'field' }, h('label', null, 'URL DE IMAGEN'), fImg, imgPreview),
+        errEl,
+        h('div', { class: 'modal-footer', style: { flexWrap: 'wrap' } },
+          isEdit && h('button', { class: 'btn btn-danger btn-sm', onClick: remove }, 'Eliminar'),
+          h('div', { style: { flex: '1' } }),
+          h('button', { class: 'btn btn-ghost btn-sm', onClick: () => { adminState.modal = null; render(); } }, 'Cancelar'),
+          h('button', { class: 'btn btn-accent btn-sm', onClick: save }, isEdit ? 'Guardar cambios' : 'Agregar'),
+        ),
+      ),
+    ),
+  );
+}
+
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+//  ADMIN PANEL
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+function AdminPanel() {
+  const all = products.map(buildVM);
+  const totalEarn = all.reduce((s, x) => s + x.earn, 0);
+  const avgComm = all.length ? (all.reduce((s, x) => s + x.comm, 0) / all.length) : 0;
+
+  const productList = CATS.map(c => {
+    const items = all.filter(x => x.cat === c.key);
+    if (!items.length) return null;
+    return [
+      h('p', { class: 'admin-section-title', style: { marginTop: '20px' } }, c.label.toUpperCase()),
+      h('div', { class: 'product-list' },
+        ...items.map(it =>
+          h('div', { class: 'product-row' },
+            it.image ? h('img', { class: 'product-row-img', src: it.image, alt: it.name }) : h('div', { class: 'product-row-img-placeholder' }, it.catLabel[0]),
+            h('div', { class: 'product-row-info' },
+              h('div', { class: 'product-row-name' },
+                it.name,
+                it.best && h('span', { class: 'tag tag-best' }, 'VENDIDO'),
+                it.premium && h('span', { class: 'tag tag-prem' }, 'PREMIUM'),
+              ),
+              h('div', { class: 'product-row-meta' }, `${it.priceStr}  Â·  comisiÃ³n ${it.totalStr}  Â·  ganÃ¡s ~${it.earnStr}`),
+            ),
+            h('div', { class: 'product-row-actions' },
+              h('a', { class: 'btn btn-ghost btn-sm', href: it.url, target: '_blank', rel: 'noopener' }, 'â†—'),
+              h('button', { class: 'btn btn-accent btn-sm', onClick: () => { adminState.modal = 'edit'; editingProduct = products.find(x => x.id === it.id); render(); } }, 'Editar'),
+            ),
+          )
+        ),
+      ),
+    ];
+  });
+
+  const commTable = h('table', { class: 'comm-table' },
+    h('thead', null, h('tr', null,
+      h('th', null, 'CATEGORÃA'), h('th', null, 'PRODUCTOS'), h('th', null, 'COMISIÃ“N PROM.'), h('th', null, 'GANANCIA TOTAL'),
+    )),
+    h('tbody', null,
+      ...CATS.map(c => {
+        const items = all.filter(x => x.cat === c.key);
+        if (!items.length) return null;
+        const ac = Math.round(items.reduce((s, x) => s + x.comm, 0) / items.length);
+        const te = items.reduce((s, x) => s + x.earn, 0);
+        return h('tr', null,
+          h('td', null, c.label),
+          h('td', null, String(items.length)),
+          h('td', null, h('span', { class: 'comm-pct' }, `${ac}%`)),
+          h('td', null, h('span', { class: 'comm-earn' }, `~${fmt(te)}`)),
+        );
+      }).filter(Boolean)
+    ),
+  );
+
+  return h('div', { class: 'admin-panel' },
+    h('div', { class: 'admin-topbar' },
+      h('div', { class: 'admin-topbar-title' }, 'Selecto', h('span', null, '.'), ' â€” Panel admin'),
+      h('button', { class: 'btn btn-ghost btn-sm', style: { color: '#EEEAE1', borderColor: 'rgba(255,255,255,0.18)' }, onClick: () => { adminState.open = false; render(); } }, 'â† Volver al sitio'),
+      h('button', { class: 'btn btn-danger btn-sm', onClick: () => { adminState.loggedIn = false; adminState.open = false; render(); } }, 'Cerrar sesiÃ³n'),
+    ),
+    h('div', { class: 'admin-body' },
+      h('div', { class: 'kpi-row' },
+        h('div', { class: 'kpi' }, h('div', { class: 'kpi-num' }, String(all.length)), h('div', { class: 'kpi-label' }, 'productos activos')),
+        h('div', { class: 'kpi' }, h('div', { class: 'kpi-num' }, `${avgComm.toFixed(1)}%`), h('div', { class: 'kpi-label' }, 'comisiÃ³n promedio')),
+        h('div', { class: 'kpi' }, h('div', { class: 'kpi-num green' }, `~${fmt(totalEarn)}`), h('div', { class: 'kpi-label' }, 'ganancia si se vende 1 de c/u')),
+      ),
+      h('p', { class: 'admin-section-title' }, 'GANANCIA POR CATEGORÃA'),
+      commTable,
+      h('p', { class: 'admin-section-title' }, `PRODUCTOS (${all.length})`),
+      ...productList.filter(Boolean).flat(),
+      h('button', { class: 'admin-add-btn', style: { marginTop: '12px' }, onClick: () => { adminState.modal = 'add'; editingProduct = null; render(); } }, '+ Agregar producto'),
+      h('div', { style: { marginTop: '28px', paddingTop: '20px', borderTop: '1px solid rgba(255,255,255,0.08)' } },
+        h('button', { class: 'btn btn-ghost btn-sm', style: { color: '#938C80', borderColor: 'rgba(255,255,255,0.12)' }, onClick: () => { if (confirm('Â¿Restaurar productos por defecto? Se perderÃ¡n todos los cambios.')) { products = resetProducts(); render(); } } }, 'Restaurar productos por defecto'),
+      ),
+    ),
+  );
+}
+
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+//  MAIN RENDER
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+function render() {
+  const { view, sort } = state;
+  const isHome = view === 'home';
+  const all = products.map(buildVM);
+
+  const SORT_DEFS = [
+    { key: 'vendidos', label: 'MÃ¡s vendidos' },
+    { key: 'precio', label: 'Menor precio' },
+    { key: 'recomendado', label: 'Recomendado' },
+  ];
+  const effSort = SORT_DEFS.find(s => s.key === sort) ? sort : 'vendidos';
+
+  const header = h('header', { class: 'header' },
+    h('div', { class: 'header-top' },
+      h('button', { class: 'wordmark', onClick: onLogoClick }, 'Selecto', h('span', { class: 'wordmark-dot' })),
+      h('div', { style: { flex: '1' } }),
+      h('span', { class: 'meta' }, "actualizado jun '26"),
+    ),
+    h('div', { class: 'cat-pills' },
+      h('button', { class: `pill${view === 'home' ? ' active' : ''}`, onClick: () => setView('home') }, 'Todos'),
+      ...CATS.map(c => h('button', { class: `pill${view === c.key ? ' active' : ''}`, onClick: () => setView(c.key) }, c.label)),
+    ),
+  );
+
+  const homeContent = isHome ? h('main', null,
+    h('section', { class: 'hero' },
+      h('span', { class: 'hero-eyebrow' }, 'CURADURÃA Â· MERCADO LIBRE ARGENTINA'),
+      h('h1', null, 'Lo mejor de Mercado Libre, ', h('em', null, 'elegido a mano'), '.'),
+      h('p', null, 'Los mÃ¡s vendidos, los de mejor precio y los de mayor descuento â€” investigados y seleccionados, no spam. ComprÃ¡s directo en Mercado Libre.'),
+      h('div', { class: 'stats' },
+        h('div', null, h('div', { class: 'stat-num' }, String(all.length)), h('div', { class: 'stat-label' }, 'productos elegidos')),
+        h('div', null, h('div', { class: 'stat-num' }, String(CATS.length)), h('div', { class: 'stat-label' }, 'categorÃ­as')),
+      ),
+    ),
+    h('div', { class: 'sections' },
+      ...CATS.map(c => {
+        const items = all.filter(x => x.cat === c.key).sort(COMPARATORS.recomendado);
+        if (!items.length) return null;
+        return h('section', { class: 'cat-section' },
+          h('div', { class: 'section-head' },
+            h('div', null, h('h2', null, c.label), h('div', { class: 'section-sub' }, `${items.length} productos seleccionados`)),
+            h('button', { class: 'see-all', onClick: () => setView(c.key) }, `Ver todos (${items.length}) â†’`),
+          ),
+          h('div', { class: 'grid' }, ...items.slice(0, 6).map(Card)),
+        );
+      }).filter(Boolean),
+    ),
+  ) : null;
+
+  const catContent = !isHome ? (() => {
+    const c = catOf(view);
+    if (!c) return null;
+    const items = all.filter(x => x.cat === view).sort(COMPARATORS[effSort] || COMPARATORS.recomendado);
+    return h('main', null,
+      h('div', { class: 'cat-view' },
+        h('button', { class: 'back-btn', onClick: () => setView('home') }, 'â† Volver a todo'),
+        h('div', { class: 'cat-view-head' },
+          h('h1', null, c.label),
+          h('span', { class: 'cat-meta' }, `${items.length} productos`),
+        ),
+        h('div', { class: 'sort-bar' },
+          h('span', { class: 'sort-label' }, 'Ordenar'),
+          ...SORT_DEFS.map(s => h('button', { class: `sort-btn${s.key === effSort ? ' active' : ''}`, onClick: () => setSort(s.key) }, s.label)),
+        ),
+        h('div', { class: 'grid' }, ...items.map(Card)),
+      ),
+    );
+  })() : null;
+
+  const footer = h('footer', null,
+    h('div', { class: 'footer-inner' },
+      h('div', { class: 'footer-top' },
+        h('div', null,
+          h('div', { class: 'footer-wordmark' }, 'Selecto', h('span', null, '.')),
+          h('p', { class: 'footer-legal' }, 'Esta pÃ¡gina contiene links de afiliados. Ganamos una comisiÃ³n si comprÃ¡s a travÃ©s de nuestros links, sin costo adicional para vos. Precios y disponibilidad sujetos a cambios en Mercado Libre.'),
+        ),
+        h('div', { class: 'footer-cols' },
+          h('div', { class: 'footer-col' }, h('span', { class: 'footer-col-title' }, 'SITIO'), h('button', { class: 'footer-link', onClick: () => setView('home') }, 'Inicio')),
+          h('div', { class: 'footer-col' }, h('span', { class: 'footer-col-title' }, 'CATEGORÃAS'), ...CATS.map(c => h('button', { class: 'footer-link', onClick: () => setView(c.key) }, c.label))),
+        ),
+      ),
+      h('div', { class: 'footer-copy' }, 'Â© 2026 Selecto Â· Sitio independiente, no afiliado oficialmente a Mercado Libre S.A. Â· Hecho en Argentina'),
+    ),
+  );
+
+  const app = document.getElementById('app');
+  app.innerHTML = '';
+  if (adminState.open) app.append(AdminPanel());
+  else app.append(header, ...[homeContent, catContent, footer].filter(Boolean));
+  if (adminState.modal === 'login') app.append(LoginModal());
+  if (adminState.modal === 'add') app.append(ProductFormModal(null));
+  if (adminState.modal === 'edit' && editingProduct) app.append(ProductFormModal(editingProduct));
+}
+
+render();
+</script>
+</body>
+</html>
